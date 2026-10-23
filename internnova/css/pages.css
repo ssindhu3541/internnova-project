@@ -1,0 +1,8 @@
+/* InternNova – About, FAQ, Policy, Terms pages */
+.ptop{background:var(--dark);color:#fff}.ptop .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}.ptop .brand{color:#fff}
+.ptop nav{display:flex;gap:4px;flex-wrap:wrap}.ptop nav a{padding:8px 12px;border-radius:9px;font-size:14.5px;color:#CFCBF7}.ptop nav a:hover,.ptop nav a.on{background:#ffffff18;color:#fff}
+.phero{background:var(--dark);color:#fff;padding:46px 0 60px}.phero h1{font-size:clamp(30px,4.5vw,46px)}.phero p{color:#CFCBF7;margin-top:10px;max-width:620px;font-size:18px}
+.doc{max-width:820px;margin:-30px auto 60px;position:relative}.doc .box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--sh)}
+.doc h2{font-size:21px;margin:26px 0 8px}.doc h2:first-child{margin-top:0}.doc p,.doc li{color:var(--mute);margin-bottom:10px}.doc ul{margin:0 0 10px 22px}.doc .updated{font-size:14px;color:var(--mute);margin-bottom:16px}
+.back{display:inline-block;margin-top:24px;color:var(--vio);font-weight:700}
+@media(max-width:700px){.doc .box{padding:22px}.ptop nav a:not(.on):not(.go){display:none}}

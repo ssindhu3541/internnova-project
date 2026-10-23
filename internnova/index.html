@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InternNova – Internships, Courses & Workshops for Students</title>
+<meta name="description" content="InternNova helps students get real internships, learn with mentors, join workshops and earn verified certificates.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="lgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6C4CF1"/><stop offset="1" stop-color="#16C9A8"/></linearGradient>
+<symbol id="logo" viewBox="0 0 40 40"><rect width="40" height="40" rx="12" fill="url(#lgG)"/><path d="M11 29V11l18 18V11" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31" cy="9" r="2.6" fill="#FFB033"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></g></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/></g></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M17 4a4 4 0 0 1 0 8M22 21a6 6 0 0 0-4-5.6"/></g></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></g></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></g></symbol>
+</defs></svg>
+
+<!-- 1. NAVIGATION BAR -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="InternNova home"><svg><use href="#logo"/></svg>InternNova</a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#programs">Programs</a><a href="#domains">Internships</a><a href="#why">Why Us</a><a href="#workshops">Workshops</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="acts" id="navActs">
+      <button class="btn ghost sm" style="color:#fff;border-color:#4A42A8" data-auth="login">Login</button>
+      <button class="btn mint sm" data-auth="register">Register</button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- 2. HERO + REGISTER / LOGIN -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <h1>Real internships. Real mentors. Real certificates.</h1>
+      <p class="lead">InternNova gives students guided internships, practical courses and live workshops, then verifies the work you finish.</p>
+      <div class="row">
+        <button class="btn mint" data-auth="register">Register free</button>
+        <a class="btn ghost" style="color:#fff;border-color:#4A42A8" href="#domains">See internships</a>
+      </div>
+      <div class="pills"><span>8 internship tracks</span><span>4 to 12 weeks</span><span>Remote friendly</span><span>Verified certificate</span></div>
+    </div>
+
+    <div class="auth" id="authCard">
+      <div class="brand"><svg><use href="#logo"/></svg>InternNova</div>
+      <div id="authIn">
+        <div class="seg" role="tablist"><button id="tabReg" role="tab" class="on">Register</button><button id="tabLog" role="tab">Login</button></div>
+
+        <form id="regForm" novalidate>
+          <h2>Create your account</h2><p class="hint">It takes less than a minute.</p>
+          <label for="rName">Full name</label><input id="rName" autocomplete="name" required>
+          <label for="rEmail">Email</label><input id="rEmail" type="email" autocomplete="email" required>
+          <div class="two"><div><label for="rCollege">College</label><input id="rCollege" required></div>
+          <div><label for="rDomain">Interested domain</label><select id="rDomain"></select></div></div>
+          <div class="two"><div><label for="rPass">Password</label><input id="rPass" type="password" autocomplete="new-password" minlength="6" required></div>
+          <div><label for="rConf">Confirm password</label><input id="rConf" type="password" autocomplete="new-password" required></div></div>
+          <div class="msg" id="rMsg" role="alert"></div>
+          <button class="btn block" type="submit">Create account</button>
+          <p class="sw">Already registered? <button type="button" class="link" data-auth="login">Login</button></p>
+        </form>
+
+        <form id="logForm" novalidate hidden>
+          <h2>Welcome back</h2><p class="hint" id="lHint">Login to open your dashboard.</p>
+          <label for="lEmail">Email</label><input id="lEmail" type="email" autocomplete="email" required>
+          <label for="lPass">Password</label><input id="lPass" type="password" autocomplete="current-password" required>
+          <div class="msg" id="lMsg" role="alert"></div>
+          <button class="btn block" type="submit">Login</button>
+          <p class="sw">New to InternNova? <button type="button" class="link" data-auth="register">Register</button></p>
+        </form>
+      </div>
+      <div id="authDone" hidden>
+        <h2 id="doneName">Welcome</h2><p class="hint">You are logged in. Continue to your dashboard to see your tasks and progress.</p>
+        <div class="row" style="margin-top:16px"><a class="btn" href="dashboard.html">Open dashboard</a><button class="btn ghost" id="doneOut">Logout</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ABOUT -->
+<section class="s" id="about">
+  <div class="wrap">
+    <div class="sh rv"><h2>About InternNova</h2><p>We built InternNova because most students graduate with theory but no work experience. Our internships fix that with guided projects, regular feedback and clear progress.</p></div>
+    <div class="grid g3">
+      <div class="card rv"><div class="ico"><svg><use href="#i-target"/></svg></div><h3>Our mission</h3><p>Give every student access to practical work experience, whatever their college or city.</p></div>
+      <div class="card rv"><div class="ico"><svg><use href="#i-book"/></svg></div><h3>Our method</h3><p>Learn a skill, build a project, get reviewed by a mentor and present your work.</p></div>
+      <div class="card rv"><div class="ico"><svg><use href="#i-award"/></svg></div><h3>Our promise</h3><p>Honest feedback, a clear schedule and a verified certificate when you finish.</p></div>
+    </div>
+    <div class="steps rv">
+      <div><h4>Register</h4><p>Create your free student account.</p></div>
+      <div><h4>Choose</h4><p>Pick an internship track that fits your goal.</p></div>
+      <div><h4>Build</h4><p>Follow your weekly schedule and finish tasks.</p></div>
+      <div><h4>Get certified</h4><p>Reach 100% and download your certificate.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. INTERNSHIP PROGRAMS -->
+<section class="s alt" id="programs">
+  <div class="wrap">
+    <div class="sh rv"><h2>Internship programs</h2><p>Three lengths to match your semester. Every program includes mentor reviews and a certificate.</p></div>
+    <div class="grid g3">
+      <div class="card plan rv"><span class="chip">Starter</span><div class="wk">4 weeks</div><ul><li>Core skill fundamentals</li><li>One mini project</li><li>Certificate of completion</li></ul><button class="btn ghost block" data-auth="register" data-plan="Starter">Join Starter</button></div>
+      <div class="card plan pop rv"><span class="chip m">Builder</span><div class="wk">8 weeks</div><ul><li>Two guided projects</li><li>Weekly mentor review</li><li>Portfolio page and certificate</li></ul><button class="btn block" data-auth="register" data-plan="Builder">Join Builder</button></div>
+      <div class="card plan rv"><span class="chip a">Pro</span><div class="wk">12 weeks</div><ul><li>Team project with code reviews</li><li>Interview preparation</li><li>Recommendation letter</li></ul><button class="btn ghost block" data-auth="register" data-plan="Pro">Join Pro</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. INTERNSHIP DOMAINS -->
+<section class="s dark" id="domains">
+  <div class="wrap">
+    <div class="sh rv"><h2>Internship domains</h2><p>Choose a track and see exactly what you will build. Filter by domain.</p></div>
+    <div class="filters" id="filters" role="group" aria-label="Filter internships"></div>
+    <div class="grid g4" id="internGrid"></div>
+  </div>
+</section>
+
+<!-- 6. WHY CHOOSE -->
+<section class="s" id="why">
+  <div class="wrap">
+    <div class="sh rv"><h2>Why choose InternNova</h2><p>Everything you need to learn, build and prove your skills in one place.</p></div>
+    <div class="grid g4">
+      <div class="card rv"><div class="ico"><svg><use href="#i-code"/></svg></div><h3>Real projects</h3><p>Build work you can show in interviews, not just exercises.</p></div>
+      <div class="card rv"><div class="ico"><svg><use href="#i-users"/></svg></div><h3>Mentor support</h3><p>Industry mentors answer doubts and review your code each week.</p></div>
+      <div class="card rv"><div class="ico"><svg><use href="#i-clock"/></svg></div><h3>Flexible schedule</h3><p>Learn after classes with a weekly plan you can track.</p></div>
+      <div class="card rv"><div class="ico"><svg><use href="#i-award"/></svg></div><h3>Verified certificates</h3><p>Shareable proof of the work you completed.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. LEARNING & MENTORSHIP -->
+<section class="s alt" id="learning">
+  <div class="wrap split">
+    <div class="rv">
+      <div class="sh" style="margin-bottom:0"><h2>Learning and mentorship</h2><p>Video courses teach the skill. Your weekly schedule turns it into progress. A mentor checks in so you never get stuck for long.</p></div>
+      <ul class="ticks"><li>Course videos for every track</li><li>Weekly task schedule with deadlines</li><li>Live mentor check-ins and code reviews</li><li>Progress percentage on your dashboard</li></ul>
+    </div>
+    <div class="mock rv" aria-label="Example of the progress dashboard">
+      <div class="top"><div class="ring" style="--p:50"><div>50%</div></div><div><h3 style="font-size:17px">This week</h3><p style="color:var(--mute);font-size:14px">3 of 6 tasks done</p></div></div>
+      <div class="t d"><i></i><span>Complete onboarding</span><em>Mon</em></div>
+      <div class="t d"><i></i><span>Watch: Project setup</span><em>Tue</em></div>
+      <div class="t d"><i></i><span>Submit weekly task 1</span><em>Wed</em></div>
+      <div class="t"><i></i><span>Mentor check-in call</span><em>Thu</em></div>
+      <div class="t"><i></i><span>Build milestone 1</span><em>Fri</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. WORKSHOPS -->
+<section class="s" id="workshops">
+  <div class="wrap">
+    <div class="sh rv"><h2>Workshops</h2><p>Short live sessions led by working engineers. Reserve a seat after you log in.</p></div>
+    <div class="grid g4" id="wsGrid"></div>
+  </div>
+</section>
+
+<!-- 9. TESTIMONIALS -->
+<section class="s dark" id="stories">
+  <div class="wrap">
+    <div class="sh rv" style="text-align:center;margin-inline:auto"><h2>What our interns say</h2></div>
+    <div class="slider" id="slider"><div class="track" id="track"></div></div>
+    <div class="ctl"><button id="prev" aria-label="Previous story">&#8592;</button><div class="dots" id="dots"></div><button id="next" aria-label="Next story">&#8594;</button></div>
+  </div>
+</section>
+
+<!-- 10. STATS -->
+<section class="s" id="stats">
+  <div class="wrap"><div class="stats">
+    <div class="stat"><b data-n="12000" data-s="+">0</b><span>Students registered</span></div>
+    <div class="stat"><b data-n="85" data-s="+">0</b><span>Partner colleges</span></div>
+    <div class="stat"><b data-n="40" data-s="+">0</b><span>Industry mentors</span></div>
+    <div class="stat"><b data-n="92" data-s="%">0</b><span>Completion rate</span></div>
+  </div></div>
+</section>
+
+<!-- 11. FAQ -->
+<section class="s alt" id="faq">
+  <div class="wrap">
+    <div class="sh rv"><h2>Frequently asked questions</h2><p>Can't find your answer? Visit the full <a href="faq.html" style="color:var(--vio);font-weight:700">FAQ page</a>.</p></div>
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+
+<!-- 12. CALL TO ACTION -->
+<section class="s" style="padding-top:60px">
+  <div class="wrap"><div class="cta rv"><h2>Your first internship starts here.</h2><p>Create a free account, pick a track and get your weekly schedule today.</p><button class="btn mint" data-auth="register">Register now</button></div></div>
+</section>
+</main>
+
+<!-- 13. FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="cols">
+      <div><div class="brand" style="color:#fff"><svg><use href="#logo"/></svg>InternNova</div><p style="margin-top:12px;max-width:290px">Internships, courses and workshops that turn students into job-ready professionals.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="#about">About us</a></li><li><a href="#programs">Programs</a></li><li><a href="#domains">Internships</a></li><li><a href="#workshops">Workshops</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About page</a></li><li><a href="faq.html">FAQ</a></li><li><a href="policy.html">Privacy policy</a></li><li><a href="terms.html">Terms &amp; conditions</a></li></ul></div>
+      <div><h4>Get updates</h4><p style="margin-bottom:10px">New internships and workshops, once a week.</p><form id="newsForm"><input id="newsMail" type="email" placeholder="you@college.edu" aria-label="Email for updates" required><button class="btn mint sm" type="submit">Subscribe</button></form></div>
+    </div>
+    <div class="bar"><span>&copy; 2026 InternNova. All rights reserved.</span><span>Built for students.</span></div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
